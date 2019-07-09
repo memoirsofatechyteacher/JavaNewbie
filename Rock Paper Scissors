@@ -1,0 +1,119 @@
+const getUserChoice = userInput => {
+  userInput = userInput.toLowerCase();
+  		if (userInput === 'rock' || userInput === 'paper' || 						userInput === 'scissors' || userInput === 'bomb') {
+    				return userInput;
+  						} else {
+    							console.log('Invalid input! Try again');
+  								}
+};
+console.log(getUserChoice('rock'));
+const getComputerChoice = () => {
+  const randomNumber = Math.floor(Math.random() * 3);
+  	switch (randomNumber){
+      case 0:
+    		console.log('rock');
+        break;
+      case 1:
+      	console.log('paper');
+        break;
+      case 2:
+       	console.log('scissors');
+        break;
+         };
+}
+const determineWinner = (userChoice, computerChoice) => {
+  if (userChoice === computerChoice){
+    	return "It's a tie!";
+  			}
+  if (userChoice === 'bomb'){
+    	return 'Total annihilation of opponent! Congrats!'
+  }
+  if (userChoice === 'rock'){
+    	if (computerChoice === 'paper'){
+        		return 'The computer won!';
+      				} else {
+        							return 'You won!';
+      }
+  }
+  if (userChoice === 'paper'){
+    	if (computerChoice === 'scissors'){
+        		return 'The computer won!';
+      				} else {
+        							return 'You won!';
+      }
+  }
+   if (userChoice === 'scissors'){
+    	if (computerChoice === 'rock'){
+        		return 'The computer won!';
+      				} else {
+        							return 'You won!';
+      }
+  }
+}
+const playGame = () => {
+  const userChoice = getUserChoice('bomb');
+  const computerChoice = getComputerChoice();
+    console.log(`You chose ${userChoice}`);
+  	console.log(`The computer chose ${computerChoice}`);
+    console.log(determineWinner(userChoice, computerChoice));
+}
+console.log(playGame());const getUserChoice = userInput => {
+  userInput = userInput.toLowerCase();
+  		if (userInput === 'rock' || userInput === 'paper' || 						userInput === 'scissors' || userInput === 'bomb') {
+    				return userInput;
+  						} else {
+    							console.log('Invalid input! Try again');
+  								}
+};
+console.log(getUserChoice('rock'));
+const getComputerChoice = () => {
+  const randomNumber = Math.floor(Math.random() * 3);
+  	switch (randomNumber){
+      case 0:
+    		console.log('rock');
+        break;
+      case 1:
+      	console.log('paper');
+        break;
+      case 2:
+       	console.log('scissors');
+        break;
+         };
+}
+const determineWinner = (userChoice, computerChoice) => {
+  if (userChoice === computerChoice){
+    	return "It's a tie!";
+  			}
+  if (userChoice === 'bomb'){
+    	return 'Total annihilation of opponent! Congrats!'
+  }
+  if (userChoice === 'rock'){
+    	if (computerChoice === 'paper'){
+        		return 'The computer won!';
+      				} else {
+        							return 'You won!';
+      }
+  }
+  if (userChoice === 'paper'){
+    	if (computerChoice === 'scissors'){
+        		return 'The computer won!';
+      				} else {
+        							return 'You won!';
+      }
+  }
+   if (userChoice === 'scissors'){
+    	if (computerChoice === 'rock'){
+        		return 'The computer won!';
+      				} else {
+        							return 'You won!';
+      }
+  }
+}
+const playGame = () => {
+  const userChoice = getUserChoice('bomb');
+  const computerChoice = getComputerChoice();
+    console.log(`You chose ${userChoice}`);
+  	console.log(`The computer chose ${computerChoice}`);
+    console.log(determineWinner(userChoice, computerChoice));
+}
+console.log(playGame());
