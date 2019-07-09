@@ -116,4 +116,4 @@ const playGame = () => {
   	console.log(`The computer chose ${computerChoice}`);
     console.log(determineWinner(userChoice, computerChoice));
 }
-console.log(playGame());
+console.log(playGame())
